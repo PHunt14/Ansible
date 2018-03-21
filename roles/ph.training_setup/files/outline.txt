@@ -1,0 +1,45 @@
+This is just a file drafting the outline of what I am envisioning for the training.  Not to be used for anything other than testing.
+
+Sections
+1. Intro to Ansible
+    - What is Ansible?
+    - "Marketing" BS
+    - Examples of how it can be used
+2. Ansible Setup
+    - Different installation methods
+    - Ansible configuration files
+3. Ansible Firsts
+    - adhoc commands
+    - static inventory
+    - dynamic inventory
+4. Writing playbooks
+    - YAML syntax
+    - Anatomy of a Playbook
+    - Ansible Modules
+    - Running playbooks
+5. Variables and Facts
+    - Variables
+    - Facts
+6. Task Control
+    - Handlers
+    - Tags
+    - Loops and Conditionals
+    - Error Handling
+7. Templates
+    - Jinja2
+8. Vault
+    - Configure vault
+    - Implement vault
+9. Roles
+    - Why roles?
+    - Creating Roles
+    - Ansible Galaxy
+10. Comprehensive Review
+
+
+
+* Use Ansible to create the environment
+* Create web pages to act as documentation and examples
+* 1 control (ansible) server
+* 3 nodes
+* 1 "master" server (has all of the html and files on it so that documents can be viewed and files retrieved)
