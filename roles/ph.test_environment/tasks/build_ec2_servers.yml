@@ -1,0 +1,13 @@
+---
+- name: start 3 ec2 servers
+  ec2:
+    assign_public_ip: true
+    aws_access_key: "{{ aws_access_key }}"
+    aws_secret_key: "{{ aws_secret_key }}"
+    count: 4
+    group:
+    image:
+    instance_type: 
+    key_name: "{{ aws_ssh_key }}"
+    state: present
+...

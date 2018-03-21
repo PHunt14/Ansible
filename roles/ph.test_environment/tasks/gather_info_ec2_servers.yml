@@ -1,0 +1,6 @@
+---
+- name: gather info on newly created ec2 instances
+  ec2_instance_facts:
+    aws_access_key: "{{ aws_access_key }}"
+    aws_secret_key: "{{ aws_secret_key }}"
+...

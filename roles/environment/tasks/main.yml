@@ -1,0 +1,37 @@
+# environment main file
+# Purpose: Ansible playbooks that will create servers.  Configure the servers.
+# this will need to be a method of creating a full environment.  LAMP stack, or 
+# something similar.  Apache webserver, Docker app server, Elastic search server, 
+# and then pulls all appropriate files to get everything running.
+# Potentially make this available for AWS as well.  The look at security, scanning.
+
+# create servers
+    # make sure that the servers OS is installed and all required services/packages
+    # setup communication between the servers
+      # /etc/hosts
+      # firewalld/iptables
+      # sshd_config
+      # ssh keys
+    # setup users on the servers
+      # users:
+        # admin
+        # ansible
+        # jdoe
+    # setup directories on the servers
+    # install appropriate packages on the servers
+    # package list into defaults?
+      # packages:
+        # httpd
+        # docker
+        # elasticsearch stuff (or free splunk)
+        # openssl
+    # configure apache for webserver
+    # leave apache off until content is up
+    # pull docker stuff
+    # configure docker to go through apache for it
+    # turn on apache for docker app and elasticsearch/splunk
+    # scan
+    # Secure
+    # scan
+    # Destroy
+    # rebuild

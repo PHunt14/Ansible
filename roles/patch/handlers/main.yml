@@ -1,0 +1,12 @@
+---
+- name: wait for server to restart
+  wait_for:
+    host: "{{ ansible_default_ipv4.address }}"
+    port: 22
+    state: started
+    delay: 25
+    timeout: 300
+  become: false
+  delegate_to: localhost
+  
+...
