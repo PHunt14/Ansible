@@ -1,0 +1,9 @@
+---
+- name: create ansible test ec2 group
+  ec2_group:
+    aws_access_key: "{{ aws_access_key }}"
+    aws_secret_key: "{{ aws_secret_key }}"
+    description: ansible environment
+    rules:
+    state: present
+...

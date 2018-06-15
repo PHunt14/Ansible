@@ -1,0 +1,22 @@
+---
+- name: Gather reboot hint
+  shell: yum check-update
+  register: reboot_hint
+  ignore_errors: true
+    
+- name: Update {{ ansible_fqdn }}
+  yum:
+    name: '*'
+    state: latest
+  async: "{{ async_value }}"
+
+- name: restart server, if kernel updated
+  command: reboot
+  async: 1
+  poll: 0
+  ignore_errors: true
+  when: '"\nkernel" in reboot_hint.stdout or "\njava" in reboot_hint.stdout'
+  notify:
+    - wait for server to restart
+    
+...

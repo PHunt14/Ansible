@@ -1,0 +1,13 @@
+---
+- name: create ansible user
+  user:
+    name: ansible
+    state: present
+    
+
+- name: copy ansible key to all servers
+
+- name: make ansible sudo without password
+
+- name: run updates
+...
