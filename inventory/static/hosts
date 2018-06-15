@@ -1,0 +1,8 @@
+[ansible]
+localhost
+
+[jenkins]
+localhost
+
+[webserver]
+localhost

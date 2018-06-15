@@ -1,0 +1,18 @@
+---
+- hosts: webserver
+  become: true
+  become_method: sudo
+  become_user: root
+
+  tasks:
+  - name: install apache
+    yum:
+      state: latest
+      name: httpd
+
+  - name: enable and start apache
+    service:
+      name: httpd
+      state: started
+      enabled: true
+...
