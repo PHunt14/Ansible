@@ -1,0 +1,19 @@
+127.0.0.1 localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1       localhost localhost.localdomain localhost6 localhost6.localdomain6
+
+# Databases
+
+{{ etc_host_db_servers }}
+
+# Web Servers
+
+{{ etc_host_web_servers }}
+
+# Storage Servers
+
+{{ etc_host_storage_servers }}
+
+# Monitoring Servers
+
+{{ etc_host_appdynamics_servers }}
+{{ etc_host_splunk_servers }}

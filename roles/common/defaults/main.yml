@@ -1,0 +1,27 @@
+---
+
+# common template variables
+
+etc_host_db_servers: |
+  192.168.50.10     db10.localdomain.com    db10
+  192.168.50.11     db11.localdomain.com    db11
+  
+etc_host_web_servers: |
+  192.168.50.20     ws20.localdomain.com    ws20
+  192.168.50.21     ws21.localdomain.com    ws21
+  192.168.50.22     ws22.localdomain.com    ws22
+  192.168.50.23     ws23.localdomain.com    ws23
+  
+etc_host_appdynamics_servers: |
+  192.168.50.30     appd30.localdomain.com  appd30
+  192.168.50.31     appd31.localdomain.com  appd31
+  
+etc_host_storage_servers: |
+  192.168.50.40     stor40.localdomain.com  stor40
+  192.168.50.41     stor41.localdomain.com  stor41
+  
+etc_host_splunk_servers: |
+  192.168.50.50     log50.localdomain.com  log30
+  192.168.50.51     log51.localdomain.com  log31
+  
+...
