@@ -1,0 +1,27 @@
+---
+
+- name: test for available dis space
+  assert:
+    that:
+      - mount.size_available > mount.size_total|float * 0.15
+    msg: Disspace has reached 85%
+  vars:
+    mount: "{{ ansible_mounts | selectattr('mount','equalto',item.mount) | list | first }}"
+  with_items:
+    - "{{ ansible_mounts }}"
+  register: space_var
+  ignore_errors: true
+  
+- name: free up space?
+  block:
+  
+  - name: fail if too little free space available
+    fail:
+      msg:"Failing, The partitions are almost full."
+    when: space_var is failed
+    
+  rescue:
+  - name: Clear up some space
+    pause:
+      prompt:"Please clear up some space in the above failed servers/partitions, press Enter to continue"
+...

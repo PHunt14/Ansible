@@ -1,0 +1,14 @@
+---
+
+- name: gather reboot hint
+  shell: yum check-update
+  register: reboot_hint
+  ignore_errors:true
+  
+- name: patch (( ansible_fqdn ))
+  yum:
+    name:'*'
+    state: latest
+  async: 1200
+
+...

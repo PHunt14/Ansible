@@ -1,0 +1,18 @@
+---
+
+- name: create vCenter Snapshots
+  vmware_gust_snapshot:
+    validate_certs: false
+    datacenter: "{{ vcenter_datacenter }}"
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    name: "{{ item.name }}"
+    state: present
+    snapshot_name: "{{ ansible_date_time.year }}{{ ansible_date_time.month }}{{ ansible_date_time.day }}"
+    description: Maintenance
+    folder: "{{ item.folder }}"
+  delegate_to: localhost
+  with_items: "{{ vcenter_server_names }}"
+
+...

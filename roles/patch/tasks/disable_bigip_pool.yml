@@ -1,5 +1,0 @@
----
-- name: disable the {{ pool_name }} pool member {{ pool_member }}
-    bigip_pool:
-      
-...

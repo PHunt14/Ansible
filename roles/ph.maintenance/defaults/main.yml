@@ -1,0 +1,11 @@
+---
+
+vcenter_datacenter:
+vcenter_hostname:
+vcenter_username:
+vcenter_password:
+vcenter_server_names:
+  name:
+  folder:
+
+...
