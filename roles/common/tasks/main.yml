@@ -1,0 +1,14 @@
+---
+
+# create users
+  # ansible
+  # phunt
+# push user public ssh keys
+# push /etc/hosts
+# push firewalld configuration
+# push /etc/sshd_config
+# install required packages
+# push /etc/crontab
+  # restart firewalld
+
+...
